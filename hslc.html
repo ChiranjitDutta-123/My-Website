@@ -1,106 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>HSLC Previous Year Question Papers</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HSLC PYQ | Study With Chiranjit</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background: #f4f4f4;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3f4f6;
       color: #333;
     }
-    h1, h2 {
-      color: #004080;
-    }
-    .year-btn {
-      display: block;
-      width: 100%;
-      padding: 10px;
-      background: #007acc;
+
+    header {
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      padding: 30px 20px;
+      text-align: center;
       color: white;
-      border: none;
-      margin-top: 10px;
-      cursor: pointer;
-      text-align: left;
-      font-size: 16px;
-      border-radius: 6px;
     }
-    .year-btn:hover {
-      background: #005fa3;
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
     }
-    .subjects {
-      display: none;
-      padding: 10px 20px;
-      background: #e0f0ff;
-      margin-bottom: 10px;
-      border-radius: 6px;
+
+    .content {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      border-radius: 12px;
     }
-    .subjects a {
-      display: block;
-      padding: 6px 10px;
-      margin: 5px 0;
-      background: #ffffff;
-      color: #007acc;
+
+    .content h2 {
+      color: #1e3c72;
+      margin-bottom: 15px;
+    }
+
+    .content p {
+      font-size: 1.1em;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    .download-heading {
+      text-align: center;
+      font-size: 1.6em;
+      font-weight: bold;
+      color: #2a5298;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .download-links {
+      list-style-type: none;
+      padding: 0;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .download-links li {
+      margin: 10px 0;
+      font-size: 1.1em;
+    }
+
+    .download-links a {
       text-decoration: none;
-      border: 1px solid #007acc;
-      border-radius: 4px;
+      color: #1e3c72;
+      font-weight: bold;
+      transition: 0.3s;
     }
-    .subjects a:hover {
-      background: #007acc;
+
+    .download-links a:hover {
+      color: #f97316;
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #2a5298;
       color: white;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
     }
   </style>
 </head>
 <body>
 
-  <h1>HSLC Previous Year Question Papers</h1>
+  <header>
+    <h1>HSLC Previous Year Questions</h1>
+  </header>
 
-  <p>
-    The HSLC (High School Leaving Certificate) exam is one of the most important milestones in a student's academic journey. Practicing previous year question papers helps students understand the exam pattern, manage time efficiently, and build confidence. Below are downloadable question papers from HSLC 2013 to 2025, organized year-wise and subject-wise for your convenience.
-  </p>
+  <div class="content">
+    <h2>About HSLC Exams</h2>
+    <p>
+      The High School Leaving Certificate (HSLC) examination is a key milestone in the academic journey of students in Assam. This exam tests students on their Class 10 syllabus and plays a crucial role in shaping their higher education path. Practicing previous year questions helps in understanding the pattern and improving accuracy.
+    </p>
 
-  <h2>📥 Click the links below to download:</h2>
-
-  <!-- Loop from 2025 to 2013 -->
-  <div id="question-list">
-    <!-- JS will inject years and subjects here -->
+    <div class="download-heading">📥 Click Below to Download PYQs</div>
+    <ul class="download-links">
+      <li><a href="hslc-2025.html">1. HSLC Previous Year Question 2025</a></li>
+      <li><a href="#">2. HSLC Previous Year Question 2024</a></li>
+      <li><a href="#">3. HSLC Previous Year Question 2023</a></li>
+      <li><a href="#">4. HSLC Previous Year Question 2022</a></li>
+      <li><a href="#">5. HSLC Previous Year Question 2021</a></li>
+      <li><a href="#">6. HSLC Previous Year Question 2020</a></li>
+      <li><a href="#">7. HSLC Previous Year Question 2019</a></li>
+      <li><a href="#">8. HSLC Previous Year Question 2018</a></li>
+      <li><a href="#">9. HSLC Previous Year Question 2017</a></li>
+      <li><a href="#">10. HSLC Previous Year Question 2016</a></li>
+      <li><a href="#">11. HSLC Previous Year Question 2015</a></li>
+      <li><a href="#">12. HSLC Previous Year Question 2014</a></li>
+      <li><a href="#">13. HSLC Previous Year Question 2013</a></li>
+    </ul>
   </div>
 
-  <script>
-    const years = Array.from({ length: 2025 - 2013 + 1 }, (_, i) => 2025 - i);
-    const subjects = ['Mathematics', 'Science', 'Social Science'];
-
-    const listDiv = document.getElementById('question-list');
-
-    years.forEach(year => {
-      // Create year button
-      const btn = document.createElement('button');
-      btn.textContent = 📘 HSLC Question ${year};
-      btn.className = 'year-btn';
-      btn.onclick = () => {
-        const subjDiv = document.getElementById('subjects-' + year);
-        subjDiv.style.display = subjDiv.style.display === 'block' ? 'none' : 'block';
-      };
-
-      // Create subject panel
-      const subjDiv = document.createElement('div');
-      subjDiv.className = 'subjects';
-      subjDiv.id = 'subjects-' + year;
-
-      subjects.forEach(sub => {
-        const link = document.createElement('a');
-        const fileName = HSLC_${year}_${sub.replace(/\s+/g, '')}.pdf; // e.g., HSLC_2025_Mathematics.pdf
-        link.href = pdfs/${year}/${fileName}; // You must organize your PDFs in folders
-        link.download = fileName;
-        link.textContent = sub;
-        subjDiv.appendChild(link);
-      });
-
-      listDiv.appendChild(btn);
-      listDiv.appendChild(subjDiv);
-    });
-  </script>
+  <footer>
+    © 2025 Study With Chiranjit | All Rights Reserved
+  </footer>
 
 </body>
 </html>
