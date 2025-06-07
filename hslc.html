@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HSLC Previous Year Question Papers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f4f4f4;
+      color: #333;
+    }
+    h1, h2 {
+      color: #004080;
+    }
+    .year-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background: #007acc;
+      color: white;
+      border: none;
+      margin-top: 10px;
+      cursor: pointer;
+      text-align: left;
+      font-size: 16px;
+      border-radius: 6px;
+    }
+    .year-btn:hover {
+      background: #005fa3;
+    }
+    .subjects {
+      display: none;
+      padding: 10px 20px;
+      background: #e0f0ff;
+      margin-bottom: 10px;
+      border-radius: 6px;
+    }
+    .subjects a {
+      display: block;
+      padding: 6px 10px;
+      margin: 5px 0;
+      background: #ffffff;
+      color: #007acc;
+      text-decoration: none;
+      border: 1px solid #007acc;
+      border-radius: 4px;
+    }
+    .subjects a:hover {
+      background: #007acc;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HSLC Previous Year Question Papers</h1>
+
+  <p>
+    The HSLC (High School Leaving Certificate) exam is one of the most important milestones in a student's academic journey. Practicing previous year question papers helps students understand the exam pattern, manage time efficiently, and build confidence. Below are downloadable question papers from HSLC 2013 to 2025, organized year-wise and subject-wise for your convenience.
+  </p>
+
+  <h2>📥 Click the links below to download:</h2>
+
+  <!-- Loop from 2025 to 2013 -->
+  <div id="question-list">
+    <!-- JS will inject years and subjects here -->
+  </div>
+
+  <script>
+    const years = Array.from({ length: 2025 - 2013 + 1 }, (_, i) => 2025 - i);
+    const subjects = ['Mathematics', 'Science', 'Social Science'];
+
+    const listDiv = document.getElementById('question-list');
+
+    years.forEach(year => {
+      // Create year button
+      const btn = document.createElement('button');
+      btn.textContent = 📘 HSLC Question ${year};
+      btn.className = 'year-btn';
+      btn.onclick = () => {
+        const subjDiv = document.getElementById('subjects-' + year);
+        subjDiv.style.display = subjDiv.style.display === 'block' ? 'none' : 'block';
+      };
+
+      // Create subject panel
+      const subjDiv = document.createElement('div');
+      subjDiv.className = 'subjects';
+      subjDiv.id = 'subjects-' + year;
+
+      subjects.forEach(sub => {
+        const link = document.createElement('a');
+        const fileName = HSLC_${year}_${sub.replace(/\s+/g, '')}.pdf; // e.g., HSLC_2025_Mathematics.pdf
+        link.href = pdfs/${year}/${fileName}; // You must organize your PDFs in folders
+        link.download = fileName;
+        link.textContent = sub;
+        subjDiv.appendChild(link);
+      });
+
+      listDiv.appendChild(btn);
+      listDiv.appendChild(subjDiv);
+    });
+  </script>
+
+</body>
+</html>
